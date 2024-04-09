@@ -21,3 +21,19 @@ dataset (main) features:
 - `description`: a description of the package from the package's documentation
 
 - `colors`: the colors of the palette is a character, comma-separated string
+
+<br>
+
+## Work on palette visualization
+
+- [Palette viewer](https://emilhvitfeldt.github.io/r-color-palettes/)
+
+- [paletteer gallery](https://pmassicotte.github.io/paletteer_gallery/)
+
+- [Palette generator](https://coolors.co/2de1fc-2afc98-09e85e-16c172-214f4b)
+
+- [Play with palettes](https://www.learnui.design/tools/data-color-picker.html#palette)
+
+- [Generate palette](https://medialab.github.io/iwanthue/)
+
+- [Color picker](https://color.adobe.com/create/color-wheel)
