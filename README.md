@@ -22,6 +22,8 @@ dataset (main) features:
 
 - `colors`: the colors of the palette is a character, comma-separated string
 
+Run `get_color_data.R` to see beautiful palettes in the console.
+
 <br>
 
 ## Work on palette visualization
