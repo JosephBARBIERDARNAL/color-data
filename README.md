@@ -28,6 +28,8 @@ Run `get_color_data.R` to see beautiful palettes in the console.
 
 ## Work on palette visualization
 
+- [Map with different palettes widget](https://colorbrewer2.org/#type=sequential&scheme=YlOrRd&n=3)
+
 - [Palette viewer](https://emilhvitfeldt.github.io/r-color-palettes/)
 
 - [paletteer gallery](https://pmassicotte.github.io/paletteer_gallery/)
