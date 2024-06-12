@@ -7,6 +7,7 @@ data <- read_csv("https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gall
 
 # Reorder the factor levels to display the bars in the correct order
 data$name <- factor(data$name, levels = rev(data$name))
+data <- mutate(data, name = fct_reorder(name, value))
 
 # Create the plot
 ggplot(data, aes(x = value, y = name, fill = name)) +

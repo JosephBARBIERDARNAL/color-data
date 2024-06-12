@@ -11,7 +11,7 @@ ggplot(data, aes(x = "", y = value, fill = name)) +
    coord_polar(theta = "y") +
    theme_void() +
    scale_fill_paletteer_d("MoMAColors::Abbott") +
-   theme(legend.position = "right") +
+   theme(legend.position = "none") +
    labs(fill = "Category")
 
 # Save the plot as an image file
