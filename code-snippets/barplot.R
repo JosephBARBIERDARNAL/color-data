@@ -1,9 +1,13 @@
-# Load necessary libraries
+# load necessary libraries
+rm(list = ls())
 library(ggplot2)
 library(paletteer)
 
 # Create a sample dataset
-data <- read_csv("https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/simple-barplot.csv")
+data <- read_csv(
+   "https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gallery/master/static/data/simple-barplot.csv",
+   show_col_types = FALSE
+)
 
 # Reorder the factor levels to display the bars in the correct order
 data$name <- factor(data$name, levels = rev(data$name))
@@ -12,7 +16,7 @@ data <- mutate(data, name = fct_reorder(name, value))
 # Create the plot
 ggplot(data, aes(x = value, y = name, fill = name)) +
    geom_col() +
-   scale_fill_paletteer_d("MoMAColors::Abbott") +
+   scale_fill_paletteer_d("MexBrewer::Huida") +
    theme_minimal() +
    theme(
       axis.title.x = element_blank(),

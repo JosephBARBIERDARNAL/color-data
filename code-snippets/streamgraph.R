@@ -1,6 +1,6 @@
 
 
-library(streamgraph)
+library(ggstream)
 library(tidyverse)
 library(paletteer)
 
@@ -15,5 +15,11 @@ long_data <- long_data %>%
 
 write.csv(long_data, "code-snippets/long_data.csv", row.names = FALSE)
 
-palette = paletteer_d("wesanderson::Royal1", 4)
-streamgraph(long_data, key = "name", value = "value", date = "year")
+# plot
+ggplot(long_data, aes(x = year, y = value, fill = name)) +
+   geom_stream(color = "black") +
+   scale_fill_paletteer_d("lisa::FridaKahlo") +
+   theme_minimal() +
+   theme(legend.position = "none") +
+   labs(title = "Streamgraph of the datastream dataset", x = "Year", y = "Value") +
+   theme(plot.title = element_text(hjust = 0.5))

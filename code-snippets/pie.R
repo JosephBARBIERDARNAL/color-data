@@ -8,6 +8,7 @@ data <- read.csv("https://raw.githubusercontent.com/holtzy/The-Python-Graph-Gall
 # Create the pie chart
 ggplot(data, aes(x = "", y = value, fill = name)) +
    geom_bar(stat = "identity", width = 1) +
+   geom_text(aes(label = paste0(name, ": ", value)), position = position_stack(vjust = 0.5)) +
    coord_polar(theta = "y") +
    theme_void() +
    scale_fill_paletteer_d("MoMAColors::Abbott") +
